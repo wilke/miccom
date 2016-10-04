@@ -1,7 +1,7 @@
 FROM centos:7
 MAINTAINER wilke@mcs.anl.gov
 
-RUN yum -y install wget libxml2-devel libxslt-devel python-lxml
+RUN yum -y install wget libxml2-devel libxslt-devel python-lxml git
 #RUN yum -y groupinstall "Development Tools"
 #RUN yum -y install python-devel.x86_64
 
