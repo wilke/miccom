@@ -4,6 +4,7 @@ MAINTAINER wilke@mcs.anl.gov
 RUN yum -y install wget libxml2-devel libxslt-devel python-lxml git
 #RUN yum -y groupinstall "Development Tools"
 #RUN yum -y install python-devel.x86_64
+#RUN rpm -Uvh libxml2-python-2.7.8-1.x86_64.rpm --nodeps
 
 WORKDIR /home/root
 RUN wget https://bootstrap.pypa.io/get-pip.py
