@@ -1,0 +1,24 @@
+mongo:
+   image: mongo
+   expose:
+   - "27017"
+   volumes:
+   - /srv/mongo:/data/db
+shock:
+  image: wilke/shock
+  extra_hosts:
+   - "mongohost:162.242.195.82"
+
+
+  ports:
+   - "7445"
+redis:
+  image: redis
+mdcs:
+  image: mdcs:0.9.1
+  links:
+    - redis
+    - mongo
+  ports:
+    - "8081:8000"
+  #command: python manage.py runserver --noreload
